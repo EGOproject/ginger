@@ -10,8 +10,7 @@
 body{
     background: linear-gradient(180deg,hsla(174, 48%, 72%, 0),hsla(207, 95%, 17%, 1));;
     background-size: cover;
-    height: 100vh;
-    background-position: center;
+    /* background-position: center; */
 }
 .navigation{
     visibility: hidden;
@@ -26,7 +25,7 @@ header{
     justify-content: space-between;
     align-items: center;
     position: fixed;
-    z-index: 99;
+    z-index: 100;
     box-shadow: 0 0 10px #000;
     background-color: hsla(207, 95%, 17%, 1);
 }
@@ -172,113 +171,4 @@ header{
 button i{
     font-size: 20px;
 }
-}
-
-
-@media screen and (max-width: 600px){
-    header{
-        height: 80px;
-        justify-content: right;
-    }
-    header ul{
-        display: none;
-    }
-    header .logo{
-        margin-left: 25px;
-    }
-    .logo{
-        font-size: 30px;
-    }
-    .logo img{
-        width: 25px;
-    }
-    .search-box input{
-        width: 100%;
-        height: 30px;
-        font-size: 16px;
-        padding-right: 25px;
-    }
-    .search-box{
-        padding-right: 25px;
-    }
-    
-    .search-box button{
-        height: 20px;
-        margin-right: 25px;
-    }
-    button i{
-        font-size: 20px;
-    }
-    .navigation{
-        position: absolute;
-        bottom: 0;
-        visibility: visible;
-        display: flex;
-        justify-content: center;
-        align-items: end;
-        min-height: 100vh;
-        position: relative;
-        width: 400px;
-        height: 70px;
-        display: flex;
-    }
-
-    .navigation ul{
-        justify-content: space-between;
-        align-items: center;
-        width: 350px;
-        display: flex;
-        height: 70px;
-        background: #fff;
-        border-radius: 10px;
-    }
-    li i{
-        color: hsla(207, 95%, 17%, 1);
-    }
-
-    .navigation ul li{
-        position: relative;
-        list-style: none;
-        width: 70px;
-        height: 70px;
-    }
-    
-    .navigation ul li a{
-        position: relative;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column;
-        width: 100%;
-        text-align: center;
-        font-weight: 500;
-        text-decoration: none ;
-    }
-    .navigation ul li a .icon{
-        position: relative;
-        display: block;
-        line-height: 75px;
-        font-size: 1.5em;
-        text-align: center;
-        transition: 0.5s;
-    }
-    .navigation ul li:hover a .icon{
-        transform: translateY(-25px);
-    }
-    .navigation ul li a .text{
-        position: absolute;
-        color: hsla(207, 95%,17%,1);
-        font-weight: 400;
-        font-size: 0.75em;
-        letter-spacing: 0.05em;
-        transition: 0.5s;
-        opacity: 0;
-        transform: translateY(20px)
-    }
-    .navigation ul li:hover a .text{
-        opacity:1;
-        transform: translateY(10px);
-        transform: scale(1.2);
-
-    }
 }

@@ -3,18 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{% block title %} {% endblock %} | Core</title>
+    {% block head %}
+    {% endblock head%}
+    <title>{% block title %} {% endblock title %} | Core</title>
 </head>
-<nav>
-    <ul>
-        <li>Home</li>
-        <li>Products</li>
-        <li>Orders</li>
-        <li>About Us</li>
-    </ul>
-</nav>
+{% include "core/nav.html" %}
+
 <body>
-    {% block content%}
-    {% endblock %}
+    {% block content %}
+    {% endblock content %}
+    {% block js %}{% endblock js %}
 </body>
+{% include "core/navmobile.html" %}
 </html>

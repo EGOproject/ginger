@@ -1,0 +1,36 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>navbars</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css">
+    <link rel="stylesheet" href="{% static "css/nav.css" %}">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <span><img src="{% static "img/egosofticon.png" %}" alt="egosoftlogo"></span>
+            Ginger
+        </div>
+        <div class="search-box">
+            <form action="">
+                <input type="text" name="search" id="srch" placeholder="Search...">
+                <button type="submit" id="srch-btn"><i class="ri-search-line"></i></button>
+            </form>
+        </div>
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Orders</a></li>
+            <li><a href="#">Cart</a></li>
+            <li><a href="#">Contact</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Account</a></li>
+        </ul>
+    </header>
+    <script src="{% static "js/nav.js" %}"></script>
+</body>
+</html>

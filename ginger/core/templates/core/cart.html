@@ -1,0 +1,47 @@
+{% extends 'core/base.html' %}
+{% load static %}
+
+{% block head %}
+<link rel="stylesheet" href="{% static "css/cart.css" %}">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+{% endblock head %}
+{% block title %}Your Cart{% endblock title %}
+
+{% block content %}
+<div class="cart-container">
+    <h1>Your Cart</h1>
+    <div class="cart-items">
+        <div class="cart-item">
+            <h3>Product Name</h3>
+            <p>Quantity: <span class="quantity">1</span></p>
+            <p>Price: <span class="price">$50</span></p>
+            <button class="btn">Remove</button>
+        </div>
+        <div class="cart-item">
+            <h3>Product Name</h3>
+            <p>Quantity: <span class="quantity">1</span></p>
+            <p>Price: <span class="price">$50</span></p>
+            <button class="btn">Remove</button>
+        </div>
+        <div class="cart-item">
+            <h3>Product Name</h3>
+            <p>Quantity: <span class="quantity">1</span></p>
+            <p>Price: <span class="price">$50</span></p>
+            <button class="btn">Remove</button>
+        </div>
+        <div class="cart-item">
+            <h3>Product Name</h3>
+            <p>Quantity: <span class="quantity">1</span></p>
+            <p>Price: <span class="price">$50</span></p>
+            <button class="btn">Remove</button>
+        </div>
+        <!-- Repeat similar cart items -->
+    </div>
+    <div class="checkout">
+        <h3>Total: <span class="total-price">$200</span></h3>
+        <a href="#" class="btn">Checkout</a>
+    </div>
+</div>
+{% endblock content %}
+
+{% block js %}<script src="{% static "js/cart.js" %}"></script>{% endblock js %}

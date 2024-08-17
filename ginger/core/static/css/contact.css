@@ -1,0 +1,138 @@
+/*=============== GOOGLE FONTS ===============*/
+@import url("https://fonts.googleapis.com/css2?family=Lora:wght@400;500;600&family=Roboto:wght@400;500&display=swap");
+
+/*=============== VARIABLES CSS ===============*/
+:root {
+  --header-height: 3.5rem;
+
+  /*========== Colors ==========*/
+  /* Change the first number */
+  /* Blue: 207 - Purple: 250 - Pink: 356 - Teal: 174 */
+  --gradient-color: linear-gradient(180deg,
+                      hsla(174, 48%, 72%, 0),
+                      hsla(207, 95%, 17%, 1));
+
+  /*========== Font and typography ==========*/
+  /*.5rem = 8px | 1rem = 16px ...*/
+  --body-font: 'Roboto', sans-serif;
+  --title-font: 'Lora', serif;
+  --biggest-font-size: 1.5rem;
+  --h1-font-size: 1.5rem;
+  --h2-font-size: 1.25rem;
+  --h3-font-size: 1rem;
+  --normal-font-size: .938rem;
+  --small-font-size: .813rem;
+  --smaller-font-size: .75rem;
+  --tiny-font-size: .625rem;
+
+  /*========== Font weight ==========*/
+  --font-medium: 500;
+  --font-semi-bold: 600;
+
+  /*========== z index ==========*/
+  --z-normal: 1;
+  --z-tooltip: 10;
+  --z-fixed: 100;
+}
+
+/* Responsive typography */
+@media screen and (min-width: 1024px) {
+  :root {
+    --biggest-font-size: 3rem;
+    --h1-font-size: 2.25rem;
+    --h2-font-size: 1.5rem;
+    --h3-font-size: 1.25rem;
+    --normal-font-size: 1rem;
+    --small-font-size: .875rem;
+    --smaller-font-size: .813rem;
+    --tiny-font-size: .688rem;
+  }
+}
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+  background-color: hsl(207, 4%, 99%);
+  background:linear-gradient(180deg,hsla(174, 48%, 72%, 0),hsla(207, 95%, 17%, 1));;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  height: 100vh;
+}
+
+.contact-container {
+    padding: 20px;
+}
+
+.contact-form {
+    background: hsl(207, 4%, 95%);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px hsl(207, 4%, 28%);
+    margin-bottom: 20px;
+    animation: fadeIn 1s ease-in-out;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid hsl(207, 4%, 82%);
+    border-radius: 5px;
+    font-size: 1rem;
+    transition: border-color 0.3s;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    border-color: hsl(207, 95%, 17%);
+}
+
+.contact-form button {
+    background-color: hsl(207, 95%, 17%);
+    color: hsl(207, 4%, 99%);
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    cursor: pointer;
+    border: none;
+    transition: background-color 0.3s;
+}
+
+.contact-form button:hover {
+    background-color: hsl(207, 80%, 25%);
+}
+
+.contact-info {
+    margin-top: 20px;
+    font-size: 1rem;
+    color: hsl(207, 4%, 44%);
+    animation: fadeInUp 1s ease-in-out;
+}
+
+.contact-info h3 {
+    font-weight: var(--font-semi-bold);
+    margin-bottom: 10px;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 570px) {
+    .contact-form {
+        padding: 15px;
+    }
+
+    .contact-form input,
+    .contact-form textarea {
+        font-size: var(--small-font-size);
+    }
+
+    .contact-info {
+        text-align: center;
+    }
+}

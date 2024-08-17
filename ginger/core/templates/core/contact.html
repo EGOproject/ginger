@@ -1,9 +1,28 @@
 {% extends 'core/base.html' %}
+{% load static %}
 
-{% block title %} Contact {% endblock %}
+{% block head %}
+<link rel="stylesheet" href="{% static "css/contact.css" %}">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+{% endblock head %}
+{% block title %}Contact Us{% endblock title %}
 
 {% block content %}
+<div class="contact-container">
+    <h1>Contact Us</h1>
+    <form action="" method="post" class="contact-form">
+        <input type="text" name="name" placeholder="Your Name" required>
+        <input type="email" name="email" placeholder="Your Email" required>
+        <textarea name="message" placeholder="Your Message" required></textarea>
+        <button type="submit" class="btn">Send Message</button>
+    </form>
+    <div class="contact-info">
+        <h3>Our Office</h3>
+        <p>1234 Main Street, City, Country</p>
+        <p>Email: support@store.com</p>
+        <p>Phone: +123 456 7890</p>
+    </div>
+</div>
+{% endblock content %}
 
-<h1> This is our contact page.</h1>
-
-{% endblock %}
+{% block js %}<script src="{% static "js/contact.js" %}"></script>{% endblock js %}

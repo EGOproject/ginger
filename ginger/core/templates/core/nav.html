@@ -23,12 +23,12 @@
             </form>
         </div>
         <ul>
-            <li><a href="#">Home</a></li>
-            <li><a href="#">Orders</a></li>
-            <li><a href="#">Cart</a></li>
-            <li><a href="#">Contact</a></li>
-            <li><a href="#">About</a></li>
-            <li><a href="#">Account</a></li>
+            <li><a href="{% url "home" %}">Home</a></li>
+            <li><a href="{% url "orders" %}">Orders</a></li>
+            <li><a href="{% url "cart" %}">Cart</a></li>
+            <li><a href="{% url "contact" %}">Contact</a></li>
+            <li><a href="{% url "about" %}">About</a></li>
+            <li><a href="{% url "login" %}">Account</a></li>
         </ul>
     </header>
     <script src="{% static "js/nav.js" %}"></script>

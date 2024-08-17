@@ -1,9 +1,37 @@
 {% extends 'core/base.html' %}
+{% load static %}
 
-{% block title %} Welcome {% endblock %}
+{% block head %}
+<link rel="stylesheet" href="{% static "css/home.css" %}">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+{% endblock head %}
+{% block title %}Home{% endblock title %}
 
 {% block content %}
-
-<h1> This is our first page.</h1>
-
+<div class="home-container">
+    <div class="banner">
+        <h1>Welcome to Our Store</h1>
+        <p>Your one-stop shop for the best products.</p>
+        <a href="#" class="btn">Shop Now</a>
+    </div>
+    <div class="features">
+        <div class="feature-box">
+            <i class="fas fa-truck"></i>
+            <h3>Fast Delivery</h3>
+            <p>Get your products delivered to your doorstep in no time.</p>
+        </div>
+        <div class="feature-box">
+            <i class="fas fa-shield-alt"></i>
+            <h3>Secure Payment</h3>
+            <p>We offer secure payment options to ensure your information is safe.</p>
+        </div>
+        <div class="feature-box">
+            <i class="fas fa-headphones-alt"></i>
+            <h3>24/7 Support</h3>
+            <p>We are here to help you at any time of the day.</p>
+        </div>
+    </div>
+</div>
 {% endblock content %}
+
+{% block js %}<script src="{% static "js/home.js" %}"></script>{% endblock js %}

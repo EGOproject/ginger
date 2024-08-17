@@ -1,0 +1,30 @@
+{% extends 'core/base.html' %}
+{% load static %}
+
+{% block head %}
+<link rel="stylesheet" href="{% static "css/about.css" %}">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+{% endblock head %}
+{% block title %}About Us{% endblock title %}
+
+{% block content %}
+<div class="about-container">
+    <h1>About Us</h1>
+    <p>We are a team of passionate individuals committed to bringing you the best shopping experience.</p>
+    <div class="team">
+        <div class="team-member">
+            <img src="{% static 'img/kakashi.jpeg' %}" alt="Team Member">
+            <h3>John Doe</h3>
+            <p>CEO</p>
+        </div>
+        <div class="team-member">
+            <img src="{% static 'img/tsunade.jpeg' %}" alt="Team Member">
+            <h3>Jane Smith</h3>
+            <p>COO</p>
+        </div>
+        <!-- Repeat for other team members -->
+    </div>
+</div>
+{% endblock content %}
+
+{% block js %}<script src="{% static "js/about.js" %}"></script>{% endblock js %}

@@ -1,0 +1,47 @@
+{% extends 'core/base.html' %}
+{% load static %}
+
+{% block head %}
+<link rel="stylesheet" href="{% static "css/orders.css" %}">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+{% endblock head %}
+{% block title %}Your Orders{% endblock title %}
+
+{% block content %}
+<div class="orders-container">
+    <h1>Your Orders</h1>
+    <div class="order-list">
+        <div class="order-item">
+            <h3>Order #22345</h3>
+            <p>Status: <span class="status">Shipped</span></p>
+            <a href="#">
+                <button class="btn" href="#">Track Order</button>
+            </a>
+        </div>
+        <div class="order-item">
+            <h3>Order #14345</h3>
+            <p>Status: <span class="status">Delivered</span></p>
+            <a href="#">
+                <button class="btn" href="#">Re-order</button>
+            </a>
+        </div>
+        <div class="order-item">
+            <h3>Order #12645</h3>
+            <p>Status: <span class="status">Shipped</span></p>
+            <a href="#">
+                <button class="btn" href="#">Track Order</button>
+            </a>
+        </div>
+        <div class="order-item">
+            <h3>Order #12348</h3>
+            <p>Status: <span class="status">Pending</span></p>
+            <a href="#">
+                <button class="btn" href="#">Track Order</button>
+            </a>
+        </div>
+        <!-- Repeat similar order items -->
+    </div>
+</div>
+{% endblock content %}
+
+{% block js %}<script src="{% static "js/orders.js" %}"></script>{% endblock js %}

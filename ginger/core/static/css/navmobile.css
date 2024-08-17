@@ -7,6 +7,11 @@
     font-family: 'Roboto', sans-serif;
 }
 
+body{
+    background: linear-gradient(180deg,hsla(174, 48%, 72%, 0),hsla(207, 95%, 17%, 1));;
+    background-size: cover;
+    background-position: center;
+}
 .navigation{
     visibility: hidden;
 }
@@ -57,15 +62,15 @@ button i{
         font-size: 20px;
     }
     .navigation{
-        position: absolute;
+        position: fixed;
         bottom: 0;
         visibility: visible;
         display: flex;
         justify-content: center;
-        align-items: end;
+        align-items: flex-end;
         min-height: 100vh;
         position: fixed;
-        width: 400px;
+        width: 100%;
         height: 70px;
         display: flex;
     }
@@ -75,6 +80,7 @@ button i{
         align-items: center;
         width: 350px;
         display: flex;
+        width: 90%;
         height: 70px;
         background: #fff;
         border-radius: 10px;
@@ -124,8 +130,7 @@ button i{
     }
     .navigation ul li:hover a .text{
         opacity:1;
-        transform: translateY(10px);
-        transform: scale(1.2);
+        transform: translateY(10px) scale(1.2);
 
     }
 }

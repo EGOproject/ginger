@@ -10,7 +10,7 @@
 body{
     background: linear-gradient(180deg,hsla(174, 48%, 72%, 0),hsla(207, 95%, 17%, 1));;
     background-size: cover;
-    /* background-position: center; */
+    background-position: center;
 }
 .navigation{
     visibility: hidden;

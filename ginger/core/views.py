@@ -1,9 +1,23 @@
 from django.shortcuts import render
-
-# Create your views here.
+from items.models import Category, Item
+from random import shuffle
 
 def index(request):
-    return render(request, 'core/index.html')
+    items = list(Item.objects.filter(available=True))
+    shuffle(items)  # Randomize the order of items
+    categories = Category.objects.all()
+    
+    # Group items by categories for easy access in the template
+    categorized_items = {}
+    for category in categories:
+        categorized_items[category.name] = list(category.items.filter(available=True))
+
+    return render(request, 'core/index.html', {
+        'categories': categories,
+        'items': items,  # [:6] Display first 6 randomized items
+        'categorized_items': categorized_items,
+    })
+
 
 def login(request):
     return render(request, 'core/login.html')

@@ -1,0 +1,32 @@
+<!-- core/product_detail.html -->
+ {% extends "core/base.html" %}
+ {% load static %}
+ {% block head %}<link rel="stylesheet" href="{% static "css/preview.css" %}">{% endblock head %}
+ {% block title %}{{item.name}}{% endblock title %}
+ {% block content %}
+<div class="preview-container">
+    <button href="{% url "home" %}" id="close-detail" class="close-detail">&times;</button>
+    <div class="details-container">
+        <div class="pimg-container">
+            <div class="main-image">
+                <img id="main-image" src="{{ item.item_img1.url }}" alt="{{ product.name }}">
+            </div>
+            <div class="image-thumbnails">
+                <img class="thumb" src="{{ item.item_img1.url }}" alt="{{ item.name }}">
+                <img class="thumb" src="{{ item.item_img2.url }}" alt="{{ item.name }}">
+                <img class="thumb" src="{{ item.item_img3.url }}" alt="{{ item.name }}">
+            </div>
+        </div>
+        <div class="pinfo-container">
+            <h2 id="pname">{{ item.name }}</h2>
+            {% if item.price %}
+            <p class="p-price">${{ item.price }}</p>
+            {% endif %}
+            <p id="pdescription">{{ item.description }}</p>
+            <button id="cart-btn" class="btn"><i class="ri-shopping-cart-2-line"></i>Add to Cart</button>
+        </div>
+    </div>
+</div>
+ {% endblock content %}
+
+ {% block js %}<script src="{% static "js/preview.js" %}"></script>{% endblock js %}
